@@ -1,6 +1,7 @@
 #include "stdio.h"
+#include "thuvien.h"
 
 void main()
 {
-	printf("Hello word \n");
+	function1_buoi_1();
 }
