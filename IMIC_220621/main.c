@@ -3,7 +3,8 @@
 
 void main()
 {
-	function1_buoi_1();
-	function2_buoi_1();
-	function3_buoi_1();
+	//Bai1();
+	//Bai2();
+	Bai3();
+	//Bai4();
 }
