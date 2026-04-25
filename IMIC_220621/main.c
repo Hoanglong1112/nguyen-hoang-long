@@ -3,8 +3,12 @@
 
 void main()
 {
-	//Bai1();
-	//Bai2();
-	Bai3();
-	//Bai4();
+	//kiemtrachanle();
+	//Solonnhat();
+	//Hoc_luc();
+	//Thutrongtuan();
+	//Bangcuuchuong2();
+	//Bangcuuchuong();
+	//Bangcuuchuong_not4();
+	buoi3_bai8();
 }
