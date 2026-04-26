@@ -41,6 +41,10 @@ void Buoi2_4(void)
 	}
 }
 
+/*
+Cấu trúc Switch-case
+*/
+
 void Buoi2_6(void)
 {
 	float a = 0, b = 0;
@@ -63,6 +67,36 @@ void Buoi2_6(void)
 		break;
 	default:
 		printf("Invalid Operator \n");
+		break;
+	}
+}
+
+void Buoi2_8(void)
+{
+	int thang = 0;
+	printf("Nhap thang: "); scanf("%d", &thang);
+	switch (thang)
+	{
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		printf("Thang co 31 ngay \n");
+		break;
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		printf("Thang co 30 ngay \n");
+		break;
+	case 2:
+		printf("Thang co 29 ngay \n");
+		break;
+	default:
+		printf("Thang nhap vao khong hop le \n");
 		break;
 	}
 }
