@@ -30,6 +30,9 @@
     <ClCompile Include="BTVN_Buoi3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BTVN_Buoi2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thuvien.h">

@@ -3,5 +3,5 @@
 
 void main()
 {
-	Buoi2_8();
+	bai2_6();
 }
