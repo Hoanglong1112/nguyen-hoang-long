@@ -1,108 +1,103 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "stdio.h"
-
-void Thao_tac_bit_and(void)
+/*
+Cấu trúc If-Else
+*/
+void Buoi2_3(void)
 {
-	int a = 5;				// 0000 0101
-	int b = 6;				// 0000 0110
-	int c = a & b;			// 0000 0100
-	printf("AND: c = %d\n", c);
+	int nam = 0;
+	printf("Nhap vao nam: ");
+	scanf("%d", &nam);
+	if ((nam % 400 == 0) || (nam % 4 == 0 && nam % 100 != 0))
+	{
+		printf("Nam %d la nam nhuan \n", nam);
+	}
+	else
+	{
+		printf("Nam %d khong phaoi la nam nhuan \n", nam);
+	}
 }
 
-void Thao_tac_bit_or(void)
+void Buoi2_4(void)
 {
-	int a = 5;				// 0000 0101
-	int b = 6;				// 0000 0110
-	int c = a | b;			// 0000 0111
-	printf("OR: c = %d\n", c);
+	float a = 0, b = 0, c = 0;
+	printf("Nhap do dai 3 canh: "); 
+	scanf("%f%f%f", &a, &b, &c);
+	if (a + b > c)
+	{
+		printf("Tam giac hop le \n");
+	}
+	else if (a + c > b)
+	{
+		printf("Tam giac hop le \n");
+	}
+	else if (b + c > a)
+	{
+		printf("Tam giac hop le \n");
+	}
+	else
+	{
+		printf("Tam giac khong hop le \n");
+	}
 }
 
-void Thao_tac_bit_xor(void)
+/*
+Cấu trúc Switch-case
+*/
+
+void Buoi2_6(void)
 {
-	int a = 5;				// 0000 0101
-	int b = 6;				// 0000 0110
-	int c = a ^ b;			// 0000 0011
-	printf("XOR: c = %d\n", c);
+	float a = 0, b = 0;
+	char phep_tinh = 0;
+	printf("Nhap 2 do thuc: "); scanf("%f%f", &a, &b);
+	printf("Nhap phep tinh: "); scanf(" %c", &phep_tinh);
+	switch (phep_tinh)
+	{
+	case '+':
+		printf("Ket qua: %.2f\n", a + b);
+		break;
+	case '-':
+		printf("Ket qua: %.2f\n", a - b);
+		break;
+	case '*':
+		printf("Ket qua: %.2f\n", a * b);
+		break;
+	case '/':
+		printf("Ket qua: %.2f\n", a / b);
+		break;
+	default:
+		printf("Invalid Operator \n");
+		break;
+	}
 }
 
-void Left_shift(void)
+void Buoi2_8(void)
 {
-	int a = 5;				// 0000 0101
-	int b = a << 2;			// 0001 0100
-	printf("LEFT_SHIFT: b = %d\n", b);
+	int thang = 0;
+	printf("Nhap thang: "); scanf("%d", &thang);
+	switch (thang)
+	{
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		printf("Thang co 31 ngay \n");
+		break;
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		printf("Thang co 30 ngay \n");
+		break;
+	case 2:
+		printf("Thang co 29 ngay \n");
+		break;
+	default:
+		printf("Thang nhap vao khong hop le \n");
+		break;
+	}
 }
 
-void Right_shift(void)
-{
-	int a = 5;				// 0000 0101
-	int b = a >> 2;			// 0000 0001
-	printf("RIGHT SHIFT: b = %d\n", b);
-}
-
-void bai2_5(void)
-{
-	int n;
-	printf("Nhap n: "); scanf("%d", &n);
-	printf("n x 2 = %d\n", n << 1);
-	printf("n x 4 = %d\n", n << 2);
-	printf("n x 8 = %d\n", n << 3);
-}
-
-void bai2_6(void)
-{
-	int n;
-	printf("Nhap n: "); scanf("%d", &n);
-	printf("n / 2 = %d\n", n >> 1);
-	printf("n / 4 = %d\n", n >> 2);
-}
-
-void bai2_7(void)
-{
-	int a = 0, b = 0;
-	printf("Nhap a va b: "); scanf("%d %d", &a, &b);
-	printf("2 so truoc khi dao: %d, %d\n", a, b);
-	a = a ^ b;
-	b = a ^ b;
-	a = a ^ b;
-	printf("2 so sau khi dao: %d, %d\n", a, b);
-}
-// Set bit
-void bai2_8(void)
-{
-	int n = 0;
-	printf("Nhap n: ");	
-	scanf("%d", &n);
-	n = n | (1 << 0) | (1 << 3);
-	printf("HEX: n = 0x%x\n", n);
-}
-//Clear bit
-void bai2_9(void)
-{
-	int n = 0;
-	printf("Nhap n: ");
-	scanf("%d", &n);
-	n &= ~(1 << 0);
-	printf("Clear bit 0: n = %d\n", n);
-}
-//Logic Gate Simulation
-void bai2_10(void)
-{
-	int a = 0, b = 0;
-	printf("Nhap a va b: ");	
-	scanf("%d %d", &a, &b);
-	int an = a & b;
-	int xo = a ^ b;
-	int o  = a | b;
-	int ot = ~a;
-	printf("DEC: AND = %d\n", an);
-	printf("HEX: AND = 0x%x\n", an);
-
-	printf("DEC: XOR = %d\n", xo);
-	printf("HEX: XOR = 0x%x\n", xo);
-
-	printf("DEC: OR = %d\n", o);
-	printf("HEX: OR = 0x%x\n", o);
-
-	printf("DEC: NOT = %d\n", ot);
-	printf("HEX: NOT = 0x%x\n", ot);
-}
