@@ -39,7 +39,7 @@ void Right_shift(void)
 	printf("RIGHT SHIFT: b = %d\n", b);
 }
 
-void bai2_5(void)
+void bai1_2_5(void)
 {
 	int n;
 	printf("Nhap n: "); scanf("%d", &n);
@@ -48,7 +48,7 @@ void bai2_5(void)
 	printf("n x 8 = %d\n", n << 3);
 }
 
-void bai2_6(void)
+void bai1_2_6(void)
 {
 	int n;
 	printf("Nhap n: "); scanf("%d", &n);
@@ -56,7 +56,7 @@ void bai2_6(void)
 	printf("n / 4 = %d\n", n >> 2);
 }
 
-void bai2_7(void)
+void bai1_2_7(void)
 {
 	int a = 0, b = 0;
 	printf("Nhap a va b: "); scanf("%d %d", &a, &b);
@@ -67,7 +67,7 @@ void bai2_7(void)
 	printf("2 so sau khi dao: %d, %d\n", a, b);
 }
 // Set bit
-void bai2_8(void)
+void bai1_2_8(void)
 {
 	int n = 0;
 	printf("Nhap n: ");	
@@ -76,7 +76,7 @@ void bai2_8(void)
 	printf("HEX: n = 0x%x\n", n);
 }
 //Clear bit
-void bai2_9(void)
+void bai1_2_9(void)
 {
 	int n = 0;
 	printf("Nhap n: ");
@@ -85,7 +85,7 @@ void bai2_9(void)
 	printf("Clear bit 0: n = %d\n", n);
 }
 //Logic Gate Simulation
-void bai2_10(void)
+void bai1_2_10(void)
 {
 	int a = 0, b = 0;
 	printf("Nhap a va b: ");	
