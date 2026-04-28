@@ -101,3 +101,129 @@ void Buoi2_8(void)
 	}
 }
 
+void bai2_9(void)
+{
+	int n = 0, k = 0;
+	printf("Nhap n va k: ");
+	scanf("%d %d", &n, &k);
+	int check = (n >> k) & 1;
+	if (check == 1)
+	{
+		printf("ON\n");
+	}
+	else
+	{
+		printf("OFF\n");
+	}
+}
+
+void bai2_10(void)
+{
+	int per = 0;
+	printf("Nhap permissions: ");
+	scanf("%d", &per);
+	int write = (per >> 1) & 1;
+	if(write == 1)
+	{
+		printf("Write Access Grante\n");
+	}
+	else
+	{
+		printf("Access Denied\n");
+	}
+}
+
+void bai2_12(void)
+{
+	float luong_co_ban = 0;
+	float so_gio_lam_viec = 0;
+	float luong_thuc_nhan = 0;
+	printf("Nhap luong co ban: ");
+	scanf("%f", &luong_co_ban);
+	printf("Nhap so gio lam viec: ");
+	scanf("%f", &so_gio_lam_viec);
+	if (so_gio_lam_viec > 160)
+	{
+		float luong_nhan = (160 * luong_co_ban) + (so_gio_lam_viec - 160) * luong_co_ban * 1.5;
+		if (luong_nhan > 15000000)
+		{
+			luong_thuc_nhan = (luong_nhan * 0.9);
+		}
+		else
+		{
+			luong_thuc_nhan = (luong_nhan * 0.95);
+		}
+	}
+	else
+	{
+		float luong_nhan = luong_co_ban * so_gio_lam_viec;
+		if (luong_nhan > 15000000)
+		{
+			luong_thuc_nhan = (luong_nhan * 0.9);
+		}
+		else
+		{
+			luong_thuc_nhan = (luong_nhan * 0.95);
+		}
+	}
+	printf("Luong thuc nhan: %.2f\n", luong_thuc_nhan);
+}
+
+void bai2_13(void)
+{
+	int x = 0, y = 0;
+	printf("Nhap toa do x, y: ");
+	scanf("%d %d", &x, &y);
+	if (x == 0 && y == 0)
+	{
+		printf("Diem nam o goc toa do. \n");
+	}
+	else if (x == 0 && y != 0)
+	{
+		printf("Diem nam tren truc y. \n");
+	}
+	else if (x != 0 && y == 0)
+	{
+		printf("Diem nam tren truc x. \n");
+	}
+	else if (x > 0 && y > 0)
+	{
+		printf("Diem nam o goc phan tu thu nhat. \n");
+	}
+	else if(x < 0 && y > 0)
+	{
+		printf("Diem nam o goc phan tu thu hai. \n");
+	}
+	else if (x < 0 && y < 0)
+	{
+		printf("Diem nam o goc phan tu thu ba. \n");
+	}
+	else if (x > 0 && y < 0)
+	{
+		printf("Diem nam o goc phan tu thu tu. \n");
+	}
+}
+
+void bai2_14(void)
+{
+	float chieu_cao = 0, can_nang = 0;
+	printf("Nhap chieu cao, can nang: ");
+	scanf("%f %f", &chieu_cao, &can_nang);
+	float BMI = can_nang / (chieu_cao * chieu_cao);
+	if (BMI < 18.5)
+	{
+		printf("Underweight \n");
+	}
+	else if (BMI >= 18.5 && BMI <= 24.9)
+	{
+		printf("Normal \n");
+	}
+	else if (BMI >= 25 && BMI <= 29.9)
+	{
+		printf("Overweight \n");
+	}
+	else
+	{
+		printf("Obese \n");
+	}
+}

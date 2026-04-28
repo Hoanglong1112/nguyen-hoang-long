@@ -127,8 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BTVN_Buoi1.c" />
     <ClCompile Include="BTVN_Buoi2.c" />
-    <ClCompile Include="BTVN_Buoi3.c" />
     <ClCompile Include="Buoi1.c" />
     <ClCompile Include="buoi2.c" />
     <ClCompile Include="buoi3.c" />

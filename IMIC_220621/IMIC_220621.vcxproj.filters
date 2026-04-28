@@ -27,10 +27,10 @@
     <ClCompile Include="buoi3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BTVN_Buoi3.c">
+    <ClCompile Include="BTVN_Buoi2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BTVN_Buoi2.c">
+    <ClCompile Include="BTVN_Buoi1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
