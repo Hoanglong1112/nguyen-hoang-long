@@ -227,3 +227,143 @@ void bai2_14(void)
 		printf("Obese \n");
 	}
 }
+
+void bai2_15(void)
+{
+	char a = 0;
+	printf("Nhap a: ");
+	scanf("%c", &a);
+	switch (a)
+	{
+	case 'R':
+		printf("STOP \n");
+		break;
+	case 'Y':
+		printf("SLOW DOWN \n");
+		break;
+	case 'G':
+		printf("GO \n");
+		break;
+	default:
+		printf("Traffic light broken");
+		break;
+	}
+}
+
+void bai2_17(void)
+{
+int ma_pin = 0;
+int so_tien_rut = 0;
+int index = 1;
+while (1)
+{
+	switch (index)
+	{
+	case 1:
+		printf("Nhap ma pin: ");
+		scanf("%d", &ma_pin);
+		index++;
+		break;
+	case 2:
+		if (ma_pin == 1234)
+		{
+			printf("Nhap so tien muon rut: \n");
+			scanf("%d", &so_tien_rut);
+			index++;
+		}
+		else
+		{	
+			printf("Sai ma pin, yeu cau nhap lai mat khau \n");
+			index = 1;
+		}
+		break;
+	case 3:
+		if ((so_tien_rut % 50000 == 0) && (so_tien_rut < 5000000))
+		{
+			printf("Transaction Successful \n");
+			return;
+		}
+		else if (so_tien_rut % 50000 != 0 && (so_tien_rut < 5000000))
+		{
+			printf("So tien rut khong phai boi cua 50000 \n");
+			index = 2;
+		}
+		else if (so_tien_rut % 50000 == 0 && (so_tien_rut > 5000000))
+		{
+			printf("So tien rut lon hon 5000000 \n");
+			index = 2;
+		}
+		else if (so_tien_rut % 50000 != 0 && (so_tien_rut > 5000000))
+		{
+			printf("So tien rut khong phai boi cua 50000 va lon hon 5000000 \n");
+			index = 2;
+		}
+		else
+		{
+			printf("So tien rut khong hop le \n");
+			index = 2;
+		}
+		break;
+	}
+}
+}
+
+void bai2_18(void)
+{
+	int n = 0;
+	printf("n = ");
+	scanf("%d", &n);
+	int check = n & (n - 1);
+	if(n > 0 && check == 0)
+	{
+		printf("%d la luy thua cua 2 \n", n);
+	}
+	else
+	{
+		printf("%d khong phai la luy thua cua 2 \n", n);
+	}
+}
+
+void bai2_19(void)
+{
+	int n = 0;
+	printf("Nhap n: ");
+	scanf("%d", &n);
+	int check_bit6 = n & (1 << 6);
+	int check_bit7 = n & (1 << 7);
+	if (check_bit7 == 0)
+	{
+		printf("Device is Sleeping \n");
+	}
+	else if (check_bit7 != 0 && check_bit6 == 0)
+	{
+		printf("Device is Ready \n");
+	}
+	else if (check_bit7 != 0 && check_bit6 != 0)
+	{
+		printf("System Failure \n");
+	}
+}
+
+void bai2_20(void)
+{
+	char a = 0;
+	printf("Nhap a: ");
+	scanf("%c", &a);
+	if (a >= 65 && a <= 90)
+	{
+		printf("A-Z \n");
+	}
+	else if(a >= 97 && a <= 122)
+	{
+		printf("a-z \n");
+	}
+	else if (a >= 48 && a <= 57)
+	{
+		printf("0-9 \n");
+	}
+	else
+	{
+		printf("Ky tu dac biet \n");
+	}
+}
